@@ -1,0 +1,502 @@
+{
+	"info": {
+		"_postman_id": "e09ccb14-2cef-475f-be64-7e39405bed5e",
+		"name": "RECIBO - INFORMES PRESENTACION",
+		"description": "Utilizado para la api de recibo\n\nRecibo es el proceso de conteo de sku que vienen del contenedor para mayor referencia se puede consultar la [HU 287227](https://dev.azure.com/homecentercolombia/SIL%20-%20Mejoras%20planeación%20CEDIS/_sprints/backlog/SIL%20-%20Contenedores/SIL%20-%20Mejoras%20planeación%20CEDIS/Sprint%202%20Contendores?workitem=287227)\n\nEn los adjuntos se encontrara la informacion de la base de datos y pantallazos\n\n<img src=\"https://content.pstmn.io/2f685361-07e0-487e-8f7b-f9d8d2f623c4/aW1hZ2UucG5n\" alt=\"\" height=\"472\" width=\"1916\">",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1.0 Consultar Usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:7233/Recibo/ConsultaUsuario/SA_LONM05",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"Recibo",
+						"ConsultaUsuario",
+						"SA_LONM05"
+					]
+				},
+				"description": "Trae informacion del usuario si esta registrado, se consulta por cedula"
+			},
+			"response": [
+				{
+					"id": "ed9a3e31-5ba6-45a3-923b-5b2e5f01bd49",
+					"name": "1.0 Consultar Usuario",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:7233/Recibo/ConsultaUsuario/80727548",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7233",
+							"path": [
+								"Recibo",
+								"ConsultaUsuario",
+								"80727548"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "167"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 14 Dec 2022 13:33:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Mensaje\": \"\",\n    \"Ok\": true,\n    \"Estado\": \"OK\",\n    \"Datos\": \"{\\\"Cedula\\\":\\\"80727548\\\",\\\"Nombre\\\":\\\"Giovanny  Barajas\\\"}\",\n    \"Objeto\": {\n        \"Cedula\": \"80727548\",\n        \"Nombre\": \"Giovanny  Barajas\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "2.0 Consulta Contenedores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:7233/Recibo/ConsultaContenedores",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"Recibo",
+						"ConsultaContenedores"
+					]
+				},
+				"description": "Trae los contenedores con programacion de trasvaciado en estado por iniciar y en proceso"
+			},
+			"response": [
+				{
+					"id": "93dc0fc2-d83c-47db-90bd-361652eecabd",
+					"name": "2.0 Consulta Contenedores",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:7233/Recibo/ConsultaContenedores",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7233",
+							"path": [
+								"Recibo",
+								"ConsultaContenedores"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "1991"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 15:26:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Mensaje\": \"\",\n    \"Ok\": true,\n    \"Estado\": \"OK\",\n    \"Datos\": \"[{\\\"Id_Contenedor_Trasvaciado\\\":66.0,\\\"Contenedor\\\":\\\"HLBU9268405p\\\",\\\"Estado\\\":\\\"RECONTEO\\\",\\\"Reconteo\\\":true},{\\\"Id_Contenedor_Trasvaciado\\\":81.0,\\\"Contenedor\\\":\\\"TLLU8886041p\\\",\\\"Estado\\\":\\\"EN PROCESO\\\",\\\"Reconteo\\\":false},{\\\"Id_Contenedor_Trasvaciado\\\":64.0,\\\"Contenedor\\\":\\\"HLBU1330418\\\",\\\"Estado\\\":\\\"EN PROCESO\\\",\\\"Reconteo\\\":false},{\\\"Id_Contenedor_Trasvaciado\\\":43.0,\\\"Contenedor\\\":\\\"ONEU0306580\\\",\\\"Estado\\\":\\\"EN PROCESO\\\",\\\"Reconteo\\\":false},{\\\"Id_Contenedor_Trasvaciado\\\":44.0,\\\"Contenedor\\\":\\\"MSKU8139425\\\",\\\"Estado\\\":\\\"EN PROCESO\\\",\\\"Reconteo\\\":false},{\\\"Id_Contenedor_Trasvaciado\\\":65.0,\\\"Contenedor\\\":\\\"UACU8514111\\\",\\\"Estado\\\":\\\"EN PROCESO\\\",\\\"Reconteo\\\":false},{\\\"Id_Contenedor_Trasvaciado\\\":83.0,\\\"Contenedor\\\":\\\"HLBU9775478\\\",\\\"Estado\\\":\\\"POR INICIAR\\\",\\\"Reconteo\\\":false},{\\\"Id_Contenedor_Trasvaciado\\\":69.0,\\\"Contenedor\\\":\\\"HLBU9268405\\\",\\\"Estado\\\":\\\"POR INICIAR\\\",\\\"Reconteo\\\":false},{\\\"Id_Contenedor_Trasvaciado\\\":82.0,\\\"Contenedor\\\":\\\"HLBU9517663\\\",\\\"Estado\\\":\\\"POR INICIAR\\\",\\\"Reconteo\\\":false}]\",\n    \"Objeto\": [\n        {\n            \"Id_Contenedor_Trasvaciado\": 66,\n            \"Contenedor\": \"HLBU9268405p\",\n            \"Estado\": \"RECONTEO\",\n            \"Reconteo\": true\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 81,\n            \"Contenedor\": \"TLLU8886041p\",\n            \"Estado\": \"EN PROCESO\",\n            \"Reconteo\": false\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 64,\n            \"Contenedor\": \"HLBU1330418\",\n            \"Estado\": \"EN PROCESO\",\n            \"Reconteo\": false\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 43,\n            \"Contenedor\": \"ONEU0306580\",\n            \"Estado\": \"EN PROCESO\",\n            \"Reconteo\": false\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 44,\n            \"Contenedor\": \"MSKU8139425\",\n            \"Estado\": \"EN PROCESO\",\n            \"Reconteo\": false\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 65,\n            \"Contenedor\": \"UACU8514111\",\n            \"Estado\": \"EN PROCESO\",\n            \"Reconteo\": false\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 83,\n            \"Contenedor\": \"HLBU9775478\",\n            \"Estado\": \"POR INICIAR\",\n            \"Reconteo\": false\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 69,\n            \"Contenedor\": \"HLBU9268405\",\n            \"Estado\": \"POR INICIAR\",\n            \"Reconteo\": false\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 82,\n            \"Contenedor\": \"HLBU9517663\",\n            \"Estado\": \"POR INICIAR\",\n            \"Reconteo\": false\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "2.1 Consulta Contenedor Destino ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:7233/Recibo/ConsultaContenedorDestino/122",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"Recibo",
+						"ConsultaContenedorDestino",
+						"122"
+					]
+				},
+				"description": "Muestra el contenedor de destino de un trasvaciado"
+			},
+			"response": [
+				{
+					"id": "8ee49b83-538b-4adc-bd82-4b43d383e46f",
+					"name": "2.1 Consulta Contenedor Destino ",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:7233/Recibo/ConsultaContenedorDestino/63",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7233",
+							"path": [
+								"Recibo",
+								"ConsultaContenedorDestino",
+								"63"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "261"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Dec 2022 15:44:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Mensaje\": \"\",\n    \"Ok\": true,\n    \"Estado\": \"OK\",\n    \"Datos\": \"{\\\"Id_Contenedor_Trasvaciado\\\":63.0,\\\"Contenedor\\\":\\\"TIIU4063845\\\",\\\"Contenedor_Destino\\\":\\\"CAXU9323435\\\"}\",\n    \"Objeto\": {\n        \"Id_Contenedor_Trasvaciado\": 63,\n        \"Contenedor\": \"TIIU4063845\",\n        \"Contenedor_Destino\": \"CAXU9323435\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "3.0 Consulta si existe contenedor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:7233/Recibo/ConsultaSiExisteContenedor/FSCU9605820",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"Recibo",
+						"ConsultaSiExisteContenedor",
+						"FSCU9605820"
+					]
+				},
+				"description": "Devuelve true si existe un contenedor y false si no existe\n\nSolo tendra en cuenta los que esten con estado 1 en la tabla tbl_contenedores"
+			},
+			"response": [
+				{
+					"id": "deea7a1f-6049-43f3-9581-1d3042114678",
+					"name": "NO existe contenedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:7233/Recibo/ConsultaSiExisteContenedor/FSCU9605820x",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7233",
+							"path": [
+								"Recibo",
+								"ConsultaSiExisteContenedor",
+								"FSCU9605820x"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "69"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Dec 2022 15:36:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Mensaje\": \"\",\n    \"Ok\": true,\n    \"Estado\": \"OK\",\n    \"Datos\": \"false\",\n    \"Objeto\": false\n}"
+				},
+				{
+					"id": "48cad617-95f2-4456-b07f-f38bd9028898",
+					"name": "si existe contenedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:7233/Recibo/ConsultaSiExisteContenedor/FSCU9605820",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7233",
+							"path": [
+								"Recibo",
+								"ConsultaSiExisteContenedor",
+								"FSCU9605820"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "67"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Dec 2022 15:35:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Mensaje\": \"\",\n    \"Ok\": true,\n    \"Estado\": \"OK\",\n    \"Datos\": \"true\",\n    \"Objeto\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "4.0 Guardar contenedor destino validacion de errores",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id_Contenedor_Trasvaciado\": 142,\r\n  \"contenedor_Destino\": \"FSCU9605820\",\r\n  \"usuario\": \"807632745\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:7233/Recibo/GuardarContenedorDestino",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"Recibo",
+						"GuardarContenedorDestino"
+					]
+				},
+				"description": "En este ejemplo se envien datos erroneos se deja para mostrar que tipo de datos devuelve"
+			},
+			"response": [
+				{
+					"id": "48584217-468d-491a-bc96-fbd000a8b658",
+					"name": "4.0 Guardar contenedor destino validacion de errores",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_Contenedor_Trasvaciado\": 1,\r\n  \"contenedor_Destino\": \"234\",\r\n  \"usuario\": \"xxxs\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7233/Recibo/GuardarContenedorDestino",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7233",
+							"path": [
+								"Recibo",
+								"GuardarContenedorDestino"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "295"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Dec 2022 21:08:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Mensaje\": \"El contenedor destino no se puede almacenar\",\n    \"Ok\": false,\n    \"Estado\": \"FAIL\",\n    \"Datos\": \"[{\\\"Mensaje\\\":\\\"NO existe contenedor destino\\\"},{\\\"Mensaje\\\":\\\"NO existe contenedor trasvaciado\\\"}]\",\n    \"Objeto\": [\n        {\n            \"Mensaje\": \"NO existe contenedor destino\"\n        },\n        {\n            \"Mensaje\": \"NO existe contenedor trasvaciado\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "4.1 Get contenedor destino validacion estado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id_Contenedor_Trasvaciado\": 63,\r\n  \"contenedor_Destino\": \"GLDU7389976\",\r\n  \"usuario\": \"80727548\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:7233/Recibo/GuardarContenedorDestino",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"Recibo",
+						"GuardarContenedorDestino"
+					]
+				},
+				"description": "Ejemplo con los datos correctos"
+			},
+			"response": [
+				{
+					"id": "4f4a2a0c-c1f6-4d02-93fb-82d2c934f6c1",
+					"name": "4.1 Get contenedor destino validacion estado",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"get_contenedor_estado\": 0\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7233/Recibo/GetContenedorEstado",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7233",
+							"path": [
+								"Recibo",
+								"GetContenedorEstado"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "113"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Dec 2022 21:16:20 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Mensaje\": \"\",\n    \"Ok\": true,\n    \"Estado\": \"OK\",\n    \"Datos\": \"[{\\\"Id_Contenedor_Trasvaciado\\\":66.0,\\\"Contenedor\\\":\\\"HLBU9268405p\\\",\\\"Estado\\\":\\\"RECONTEO\\\",\\\"Reconteo\\\":true,\\\"Origen\\\":\\\"China\\\",\\\"Validacion\\\":\\\"OnTime\\\",\\\"Destino\\\":\\\"Bogota\\\",\\\"Flete\\\":\\\"Activo\\\"},{\\\"Id_Contenedor_Trasvaciado\\\":81.0,\\\"Contenedor\\\":\\\"TLLU8886041p\\\",\\\"Estado\\\":\\\"EN PROCESO\\\",\\\"Reconteo\\\":false,\\\"Origen\\\":\\\"China\\\",\\\"Validacion\\\":\\\"OnTime\\\",\\\"Destino\\\":\\\"Bogota\\\",\\\"Flete\\\":\\\"Activo\\\"},{\\\"Id_Contenedor_Trasvaciado\\\":64.0,\\\"Contenedor\\\":\\\"HLBU1330418\\\",\\\"Estado\\\":\\\"EN PROCESO\\\",\\\"Reconteo\\\":false,\\\"Origen\\\":\\\"China\\\",\\\"Validacion\\\":\\\"OnTime\\\",\\\"Destino\\\":\\\"Bogota\\\",\\\"Flete\\\":\\\"Activo\\\"},{\\\"Id_Contenedor_Trasvaciado\\\":43.0,\\\"Contenedor\\\":\\\"ONEU0306580\\\",\\\"Estado\\\":\\\"EN PROCESO\\\",\\\"Reconteo\\\":false,\\\"Origen\\\":\\\"China\\\",\\\"Validacion\\\":\\\"OnTime\\\",\\\"Destino\\\":\\\"Bogota\\\",\\\"Flete\\\":\\\"Activo\\\"},{\\\"Id_Contenedor_Trasvaciado\\\":44.0,\\\"Contenedor\\\":\\\"MSKU8139425\\\",\\\"Estado\\\":\\\"EN PROCESO\\\",\\\"Reconteo\\\":false,\\\"Origen\\\":\\\"China\\\",\\\"Validacion\\\":\\\"OnTime\\\",\\\"Destino\\\":\\\"Bogota\\\",\\\"Flete\\\":\\\"Activo\\\"},{\\\"Id_Contenedor_Trasvaciado\\\":65.0,\\\"Contenedor\\\":\\\"UACU8514111\\\",\\\"Estado\\\":\\\"EN PROCESO\\\",\\\"Reconteo\\\":false,\\\"Origen\\\":\\\"China\\\",\\\"Validacion\\\":\\\"OnTime\\\",\\\"Destino\\\":\\\"Bogota\\\",\\\"Flete\\\":\\\"Activo\\\"},{\\\"Id_Contenedor_Trasvaciado\\\":83.0,\\\"Contenedor\\\":\\\"HLBU9775478\\\",\\\"Estado\\\":\\\"POR INICIAR\\\",\\\"Reconteo\\\":false,\\\"Origen\\\":\\\"China\\\",\\\"Validacion\\\":\\\"OnTime\\\",\\\"Destino\\\":\\\"Bogota\\\",\\\"Flete\\\":\\\"Activo\\\"},{\\\"Id_Contenedor_Trasvaciado\\\":69.0,\\\"Contenedor\\\":\\\"HLBU9268405\\\",\\\"Estado\\\":\\\"POR INICIAR\\\",\\\"Reconteo\\\":false,\\\"Origen\\\":\\\"China\\\",\\\"Validacion\\\":\\\"OnTime\\\",\\\"Destino\\\":\\\"Bogota\\\",\\\"Flete\\\":\\\"Activo\\\"},{\\\"Id_Contenedor_Trasvaciado\\\":82.0,\\\"Contenedor\\\":\\\"HLBU9517663\\\",\\\"Estado\\\":\\\"POR INICIAR\\\",\\\"Reconteo\\\":false,\\\"Origen\\\":\\\"China\\\",\\\"Validacion\\\":\\\"OnTime\\\",\\\"Destino\\\":\\\"Bogota\\\",\\\"Flete\\\":\\\"Activo\\\"}]\",\n    \"Objeto\": [\n        {\n            \"Id_Contenedor_Trasvaciado\": 66,\n            \"Contenedor\": \"HLBU9268405p\",\n            \"Estado\": \"RECONTEO\",\n            \"Reconteo\": true,\n            \"Origen\": \"China\",\n            \"Validacion\": \"OnTime\",\n            \"Destino\": \"Bogota\",\n            \"Flete\": \"Activo\"\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 81,\n            \"Contenedor\": \"TLLU8886041p\",\n            \"Estado\": \"EN PROCESO\",\n            \"Reconteo\": false,\n            \"Origen\": \"China\",\n            \"Validacion\": \"OnTime\",\n            \"Destino\": \"Bogota\",\n            \"Flete\": \"Activo\"\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 64,\n            \"Contenedor\": \"HLBU1330418\",\n            \"Estado\": \"EN PROCESO\",\n            \"Reconteo\": false,\n            \"Origen\": \"China\",\n            \"Validacion\": \"OnTime\",\n            \"Destino\": \"Bogota\",\n            \"Flete\": \"Activo\"\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 43,\n            \"Contenedor\": \"ONEU0306580\",\n            \"Estado\": \"EN PROCESO\",\n            \"Reconteo\": false,\n            \"Origen\": \"China\",\n            \"Validacion\": \"OnTime\",\n            \"Destino\": \"Bogota\",\n            \"Flete\": \"Activo\"\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 44,\n            \"Contenedor\": \"MSKU8139425\",\n            \"Estado\": \"EN PROCESO\",\n            \"Reconteo\": false,\n            \"Origen\": \"China\",\n            \"Validacion\": \"OnTime\",\n            \"Destino\": \"Bogota\",\n            \"Flete\": \"Activo\"\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 65,\n            \"Contenedor\": \"UACU8514111\",\n            \"Estado\": \"EN PROCESO\",\n            \"Reconteo\": false,\n            \"Origen\": \"China\",\n            \"Validacion\": \"OnTime\",\n            \"Destino\": \"Bogota\",\n            \"Flete\": \"Activo\"\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 83,\n            \"Contenedor\": \"HLBU9775478\",\n            \"Estado\": \"POR INICIAR\",\n            \"Reconteo\": false,\n            \"Origen\": \"China\",\n            \"Validacion\": \"OnTime\",\n            \"Destino\": \"Bogota\",\n            \"Flete\": \"Activo\"\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 69,\n            \"Contenedor\": \"HLBU9268405\",\n            \"Estado\": \"POR INICIAR\",\n            \"Reconteo\": false,\n            \"Origen\": \"China\",\n            \"Validacion\": \"OnTime\",\n            \"Destino\": \"Bogota\",\n            \"Flete\": \"Activo\"\n        },\n        {\n            \"Id_Contenedor_Trasvaciado\": 82,\n            \"Contenedor\": \"HLBU9517663\",\n            \"Estado\": \"POR INICIAR\",\n            \"Reconteo\": false,\n            \"Origen\": \"China\",\n            \"Validacion\": \"OnTime\",\n            \"Destino\": \"Bogota\",\n            \"Flete\": \"Activo\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
